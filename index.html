@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mr Bond</title>
+    <script src="JS/randomize.js"></script>
+    <script>function calculate() {
+    var ans = document.getElementById("firstName").innerHTML
+    var vowels = "";
+    var vowelList = "aeoiuAEOIU"
+    for (x in ans) {
+        if (vowelList.indexOf(ans[x]) != -1) {
+            vowels += ans[x]
+        }
+    }
+
+    console.log(vowels)
+
+    var title = document.title
+
+    if (title.length % 2 == 0) {
+        document.title = "FakeNews"
+        console.log("FakeNews")
+    } else {
+        console.log("BreakingNews")
+        document.title = "BreakingNews"
+
+    }
+
+
+}</script>
+</head>
+
+
+
+<body onload="randomize()">
+
+    <div id="parent">
+
+        <div id="task1">
+
+        </div>
+
+        <div id="task2">
+
+        </div>
+
+        <button onclick="calculate()">Submit</button>
+    </div>
+
+
+
+</body>
+
+</html>
